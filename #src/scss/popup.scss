@@ -1,0 +1,169 @@
+.modal {
+   position: absolute;
+   visibility: hidden;
+   opacity: 0;
+   -webkit-transition: .3s;
+   transition: .3s;
+   top: -1000px;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 10003;
+   background: rgba(0, 0, 0, 0.9);
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: start;
+   -ms-flex-align: start;
+   align-items: flex-start;
+   overflow-y: scroll;
+   padding: 60px 15px;
+   height: 100%;
+
+   @media (max-width:962px) {
+      padding: 0px 10px;
+   }
+}
+
+.modal_active {
+   position: fixed;
+   top: 0;
+   visibility: visible;
+   opacity: 1;
+   -webkit-transition: .3s;
+   transition: .3s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.modal__content {
+   width: 80%;
+   padding: 30px;
+   height: 100%;
+   max-height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #f9f9f9;
+   -webkit-box-shadow: 0 5px 15px black;
+   box-shadow: 0 5px 15px black;
+   border-radius: 3px;
+   position: relative;
+   border: 2px dotted $whiteColor;
+   box-shadow: 0px 0px 30px $buttonColor;
+
+
+   @media (max-width: 962px) {
+      height: 80%;
+   }
+
+   @media (max-width: 590px) {
+      height: 90%;
+   }
+
+   @media (max-width: 450px) {
+      padding: 10px;
+   }
+}
+
+.modal__close-button {
+   background: #ff0000;
+   height: 30px;
+   width: 30px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   border: none;
+   position: absolute;
+   right: 0;
+   top: 0;
+   background: none;
+   cursor: pointer;
+   -webkit-transition: .3s;
+   transition: .3s;
+   outline: none;
+}
+
+.modal__close-button:hover {
+   -webkit-transition: .3s;
+   transition: .3s;
+   -webkit-transform: rotate(180deg);
+   transform: rotate(180deg);
+}
+
+
+.hidden {
+   overflow: hidden;
+}
+
+
+.pop {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+
+   .pop__info {
+      padding: 0px 0px 20px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+         padding: 0px 0px 30px 0px;
+         @include adaptive-font (18, 16);
+         font-weight: 500;
+         line-height: calc(30 / 18);
+         color: $titleColor;
+      }
+
+      a {
+         padding: 13px 62px;
+         color: $buttonColor;
+         border: 2px solid #F53838;
+         box-sizing: border-box;
+         border-radius: 50px;
+         transition: all 0.3s ease;
+
+         &:hover {
+            background-color: $buttonColor;
+            color: $whiteColor;
+            box-shadow: 0px 0px 30px $buttonColor;
+         }
+      }
+
+      ._pop__price {
+         display: flex;
+         flex-direction: column;
+      }
+   }
+
+
+   p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 16px;
+      line-height: 30px;
+   }
+
+   ._pop__price {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+   }
+
+}

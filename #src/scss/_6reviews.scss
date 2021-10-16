@@ -1,0 +1,135 @@
+.reviews {
+   padding: 0px 0px 86px 0px;
+}
+
+.reviews__container {
+
+   .reviews__title {
+      text-align: center;
+
+      h2 {
+         padding: 0px 0px 20px 0px;
+         width: 39%;
+         display: block;
+         margin: 0 auto;
+         @include adaptive-font (35, 16);
+         font-weight: 500;
+         line-height: calc(50 / 35);
+         color: $titleColor;
+
+         @media (max-width: $md2 +px) {
+            width: 100%;
+         }
+      }
+
+      p {
+         padding: 0px 0px 60px 0px;
+         width: 50%;
+         display: block;
+         margin: 0 auto;
+         @include adaptive-font (16, 16);
+         font-weight: 500;
+         line-height: calc(30 / 16);
+         color: $textColor;
+         text-align: center;
+
+         @media (max-width: $md2 +px) {
+            width: 100%;
+         }
+      }
+   }
+
+}
+
+.slider {
+   padding: 0px 0px 0px 150px;
+   display: flex;
+   align-items: stretch;
+   justify-content: space-between;
+
+
+   @media (max-width: $md3 +px) {
+      padding: 0px 0px 0px 50px;
+   }
+
+   @media (max-width: $md4 +px) {
+      padding: 0px 0px 0px 30px;
+   }
+}
+
+.slider__item {
+   margin-right: 50px;
+   max-width: 400px;
+   padding: 26px 30px 18px 30px;
+   display: flex;
+   flex-direction: column;
+   border: 2px solid #DDDDDD;
+   box-sizing: border-box;
+   border-radius: 10px;
+
+   &:last-child {
+      margin-right: 0px;
+   }
+
+   @media (max-width: $md4 +px) {
+      width: 350px;
+      padding: 26px 10px 18px 10px;
+   }
+}
+
+.item__name {
+   padding: 0px 0px 11px 0px;
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+
+.name__avatar {
+   margin-right: 20px;
+}
+
+.name__adress {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: left;
+
+   span {
+      margin-bottom: -7px;
+      @include adaptive-font (18, 16);
+      font-weight: 500;
+      line-height: calc(30 / 18);
+      color: $titleColor;
+   }
+
+   p {
+      padding-right: 5px;
+      @include adaptive-font (14, 16);
+      line-height: calc(30 / 14);
+      color: $textColor;
+   }
+}
+
+.name__rating {
+   display: flex;
+   align-items: center;
+   position: absolute;
+   right: 0;
+
+   span {
+      margin-right: 5px;
+   }
+}
+
+._icon-ant-design_star-filled {
+   color: #FEA250;
+}
+
+.item__descr {
+   p {
+      @include adaptive-font (16, 16);
+      line-height: calc(30 / 16);
+      color: $textColor;
+   }
+
+}
