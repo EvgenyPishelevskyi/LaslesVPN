@@ -8,18 +8,16 @@
 
 .subcribe__form {
    padding: 20px 72px;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+   @include center-between;
    background: #bebebe;
    border-radius: 10px;
    box-shadow: 0px 0px 10px $buttonColor;
 
-   @media (max-width: $md2 +px) {
+   @media (max-width: ($md2 +px)) {
       padding: 20px 30px;
    }
 
-   @media (max-width: $md3 +px) {
+   @media (max-width: ($md3 +px)) {
       text-align: center;
       flex-direction: column;
    }
@@ -27,13 +25,12 @@
 
 ._form__info {
    flex: 0 1 37%;
-   
 
-   @media (max-width: $md1 +px) {
+   @media (max-width:( $md1 +px)) {
       flex: 0 1 52%;
    }
 
-   h2 {
+   .from-info__title {
       padding: 37px 0px 7px 0px;
       @include adaptive-font (35, 16);
       font-weight: 500;
@@ -41,7 +38,7 @@
       color: $titleColor;
    }
 
-   p {
+   .from-info__descr {
       padding: 0px 0px 32px 0px;
       @include adaptive-font (16, 16);
       line-height: calc(30 / 16);
@@ -50,15 +47,15 @@
 }
 
 ._form__button {
-   a {
-      display: inline-block;
+   .form-btn__link {
       padding: 21px 69px;
+      display: inline-block;
       background-color: $buttonColor;
       color: $whiteColor;
       border-radius: 10px;
-      transition:all 0.3s ease;
+      transition: all 0.3s ease;
 
-      &:hover{
+      &:hover {
          box-shadow: 0px 0px 30px $buttonColor;
       }
    }

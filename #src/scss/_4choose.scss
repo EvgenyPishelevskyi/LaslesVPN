@@ -1,7 +1,7 @@
 .choose {
    padding: 0px 0px 150px 0px;
 
-   @media (max-width: $md2 +px) {
+   @media (max-width: ($md2 +px)) {
       padding: 0px 0px 70px 0px;
    }
 }
@@ -9,7 +9,7 @@
 .choose__info {
    text-align: center;
 
-   h2 {
+   .choose-info__title {
       padding: 0px 0px 20px 0px;
       @include adaptive-font (35, 16);
       font-weight: 500;
@@ -17,38 +17,35 @@
       color: $titleColor;
    }
 
-   p {
+   .choose-info__descr {
+      padding: 0px 0px 60px 0px;
+      margin: 0 auto;
       width: 50%;
       display: block;
-      margin: 0 auto;
-      padding: 0px 0px 60px 0px;
       @include adaptive-font (16, 16);
       line-height: calc(30 / 16);
       color: $textColor;
 
-      @media (max-width: $md2 + px) {
+      @media (max-width: ($md2 + px)) {
          width: 100%;
       }
    }
 }
 
 .choose__plans {
-   display: flex;
-   justify-content: space-between;
+   @include center-between;
    padding: 0px 44px;
 
-   @media (max-width: $md2 +px) {
+   @media (max-width: ($md2 +px)) {
       padding: 0px 10px;
       flex-direction: column;
    }
 }
 
 ._plan__item {
-   height: 760px;
    padding: 3px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+   height: 760px;
+   @include column-center;
    flex: 0 1 29.8%;
    background: #FFFFFF;
    border: 2px solid #DDDDDD;
@@ -61,7 +58,7 @@
       box-shadow: 0px 0px 30px $buttonColor;
    }
 
-   @media (max-width: $md2 +px) {
+   @media (max-width:($md2 +px)) {
       padding: 10px;
       margin-bottom: 20px;
       flex-direction: row;
@@ -72,46 +69,45 @@
       }
    }
 
-   @media (max-width: $md3 +px) {
+   @media (max-width: ($md3 +px)) {
       flex-direction: column;
    }
 
-   img {
+   .item-plan__pic {
       padding: 71px 0px 30px 0px;
 
-      @media (max-width: $md2 +px) {
+      @media (max-width: ($md2 +px)) {
          padding: 10px 0px;
       }
    }
 
-   span {
+   .item-plan__name {
       padding: 0px 0px 30px 0px;
       @include adaptive-font (18, 16);
       font-weight: 500;
       line-height: calc(30 / 18);
       color: $titleColor;
 
-      @media (max-width: $md2 +px) {
+      @media (max-width: ($md2 +px)) {
          flex: 1 1 20%;
          padding: 10px 0px;
       }
    }
 
-   ul {
+   .item-plan__list {
       flex: 1 1 auto;
 
-      @media (max-width: $md2 +px) {
+      @media (max-width: ($md2 +px)) {
          flex: 1 1 auto;
-         align-items: center;
-         justify-content: center;
+         @include center;
          text-align: center;
       }
 
-      @media (max-width: $md3 +px) {
+      @media (max-width: ($md3 +px)) {
          padding: 0px 0px 20px 0px;
       }
 
-      li {
+      .plan-list__item {
          display: flex;
          align-items: center;
          margin-bottom: 10px;
@@ -119,9 +115,8 @@
          line-height: calc(30 / 14);
          color: $textColor;
 
-         @media (max-width: $md2 +px) {
+         @media (max-width: ($md2 +px)) {
             width: 215px;
-            align-items: center;
             text-align: center;
          }
 
@@ -139,22 +134,21 @@
 
 ._item__price {
    padding: 0px 0px 46px 0px;
-   display: flex;
-   flex-direction: column;
+   @include column-center;
    text-align: center;
 
-   @media (max-width: $md2 +px) {
+   @media (max-width: ($md2 +px)) {
       padding: 0px 0px 0px 0px;
    }
 
-   span {
+   .price-item__name {
       padding: 0px 0px 18px 0px;
       @include adaptive-font (25, 16);
       font-weight: 500;
       line-height: calc(30 / 25);
    }
 
-   a {
+   .price-item__link {
       padding: 13px 62px;
       color: $buttonColor;
       border: 2px solid #F53838;

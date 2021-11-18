@@ -12,12 +12,10 @@
 }
 
 .header__wrapper {
-   max-width: 1920px;
-   margin: 0 auto;
    padding: 0px 150px;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+   margin: 0 auto;
+   max-width: 1920px;
+   @include center-between;
 
    @media (max-width: 1200px) {
       padding: 0px 49px;
@@ -35,15 +33,14 @@
 }
 
 .header__logo {
-   display: flex;
-   align-items: center;
    margin-right: 10px;
+   @include center;
 
-   @media (max-width: $md2 +px) {
+   @media (max-width: ($md2 +px)) {
       order: 0;
    }
 
-   img {
+   ._logo__pic {
       margin-right: 9px;
 
       &:hover {
@@ -61,7 +58,7 @@
       }
    }
 
-   span {
+   ._logo__name {
       @include adaptive-font (20, 16);
       font-weight: 500;
       line-height: calc(24 / 20);
@@ -77,18 +74,18 @@
 .header__list {
    display: flex;
 
-   @media (max-width: $md2 +px) {
+   @media (max-width: ($md2 +px)) {
       display: none;
    }
 
-   li {
+   ._header-list__item {
       margin-right: 40px;
 
       &:last-child {
          margin-right: 0px;
       }
 
-      a {
+      ._header-list__link {
          @include adaptive-font (16, 16);
          line-height: calc(19 / 16);
          transition: all 0.3s ease;
@@ -104,7 +101,7 @@
    display: flex;
    align-items: center;
 
-   @media (max-width: $md2 +px) {
+   @media (max-width: ($md2 +px)) {
       order: 1;
    }
 

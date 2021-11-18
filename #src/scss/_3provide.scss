@@ -8,10 +8,9 @@
 
 .provide__container {
    padding: 0px 45px;
-   display: flex;
-   justify-content: space-between;
+   @include center-between;
 
-   @media (max-width: $md2 +px) {
+   @media (max-width: ($md2 +px)) {
       padding: 0px 15px;
       flex-direction: column-reverse;
       align-items: center;
@@ -22,12 +21,12 @@
    padding: 53px 0px 0px 0px;
    flex: 0 1 36.8%;
 
-   @media (max-width: $md2 +px) {
+   @media (max-width:($md2 +px)) {
       padding: 0px 0px 15px 0px;
       text-align: center;
    }
 
-   h2 {
+   .provide-info__title {
       padding: 0px 0px 22px 0px;
       @include adaptive-font (35, 16);
       font-weight: 500;
@@ -35,30 +34,27 @@
       color: $titleColor;
    }
 
-   p {
+   .provide-info__descr {
       padding: 0px 0px 20px 0px;
       @include adaptive-font (16, 16);
       line-height: calc(30 / 16);
       color: $textColor;
    }
 
-   ul {
-      @media (max-width: $md2 +px) {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
+   .provide-info__list {
+      @media (max-width: ($md2 +px)) {
+         @include column-center;
          text-align: center;
       }
 
-      li {
+      .provide-list__item {
          margin-bottom: 15px;
          display: flex;
          align-items: center;
          font-size: 14px;
          line-height: calc(30 / 14);
 
-         @media (max-width: $md2 +px) {
+         @media (max-width: ($md2 +px)) {
             width: 215px;
          }
 
